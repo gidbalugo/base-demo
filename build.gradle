@@ -29,11 +29,10 @@ allprojects {
     }
 
     dependencies {
-        compile('org.springframework.boot:spring-boot-starter-amqp')
         compile('org.springframework.boot:spring-boot-starter-data-jpa')
         compile('org.springframework.boot:spring-boot-starter-hateoas')
         compile('org.springframework.cloud:spring-cloud-stream')
-        compile('org.springframework.cloud:spring-cloud-stream-binder-rabbit')
+        compile('org.springframework.cloud:spring-cloud-stream-binder-kinesis:1.0.0.RELEASE')
         compile('javax.xml.bind:jaxb-api')
         runtime('com.h2database:h2')
         testCompile('org.springframework.boot:spring-boot-starter-test')

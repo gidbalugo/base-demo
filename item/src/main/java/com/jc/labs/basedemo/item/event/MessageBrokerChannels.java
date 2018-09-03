@@ -8,6 +8,6 @@ public interface MessageBrokerChannels {
     @Output
     MessageChannel itemAdded();
 
-    @Output
-    MessageChannel itemDeleted();
+//    @Output
+//    MessageChannel itemDeleted();
 }

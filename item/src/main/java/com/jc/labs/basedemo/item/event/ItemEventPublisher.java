@@ -33,9 +33,10 @@ class ItemEventPublisher {
                     Message<String> message = buildMessage(domainEvent);
                     if ("itemAdded".equals(eventName)) {
                         sent = messageBrokerChannels.itemAdded().send(message);
-                    } else if ("itemDeleted".equals(eventName)) {
-                        sent = messageBrokerChannels.itemDeleted().send(message);
                     }
+//                    } else if ("itemDeleted".equals(eventName)) {
+//                        sent = messageBrokerChannels.itemDeleted().send(message);
+//                    }
 
                    if (sent) {
                        domainEvent.markPublished();

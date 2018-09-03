@@ -20,10 +20,10 @@ public class NotificationServiceApplication {
         System.out.println("Received payload to add: " + message);
     }
 
-    @StreamListener(MessageBrokerChannels.ITEM_DELETED)
-    public void handleDeleted(String message) {
-        System.out.println("Received payload to delete: " + message);
-    }
+//    @StreamListener(MessageBrokerChannels.ITEM_DELETED)
+//    public void handleDeleted(String message) {
+//        System.out.println("Received payload to delete: " + message);
+//    }
 
 }
 
@@ -33,12 +33,12 @@ public class NotificationServiceApplication {
 interface MessageBrokerChannels {
     String ITEM_ADDED = "itemAdded";
 
-    String ITEM_DELETED = "itemDeleted";
+//    String ITEM_DELETED = "itemDeleted";
 
     @Input(value = ITEM_ADDED)
     SubscribableChannel itemAdded();
 
-    @Input(value = ITEM_DELETED)
-    SubscribableChannel itemDeleted();
+//    @Input(value = ITEM_DELETED)
+//    SubscribableChannel itemDeleted();
 
 }
